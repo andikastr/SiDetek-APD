@@ -327,7 +327,7 @@ elif page == "🔎 Deteksi APD":
                 col_img_upload1, col_img_upload2 = st.columns(2)
                 with col_img_upload1:
                     st.markdown("<div class='custom-card'><h5>Gambar Asli yang Diunggah:</h5></div>", unsafe_allow_html=True)
-                    st.image(original_image_pil, caption=f"Nama file: {original_image_name}", use_column_width=True)
+                    st.image(original_image_pil, caption=f"Nama file: {original_image_name}", use_container_width=True)
 
                 if st.button("🚀 Mulai Deteksi APD pada Gambar Ini", key="detect_image_button"):
                     if MODEL is None:
@@ -338,7 +338,7 @@ elif page == "🔎 Deteksi APD":
                             
                             with col_img_upload2:
                                 st.markdown("<div class='custom-card'><h5>Gambar Hasil Deteksi:</h5></div>", unsafe_allow_html=True)
-                                st.image(result_image_pil, caption="Gambar dengan anotasi deteksi", use_column_width=True)
+                                st.image(result_image_pil, caption="Gambar dengan anotasi deteksi", use_container_width=True)
 
                             if detections:
                                 st.markdown("---")
@@ -482,7 +482,7 @@ elif page == "📜 Riwayat Deteksi":
                     with col_hist_img1:
                         st.markdown("<h6>Gambar Asli:</h6>", unsafe_allow_html=True)
                         original_img_pil = helper.blob_to_pil(record.original_image_blob)
-                        st.image(original_img_pil, use_column_width=True, output_format='PNG')
+                        st.image(original_img_pil, use_container_width=True, output_format='PNG')
                 except Exception as e:
                     with col_hist_img1:
                         st.warning(f"Gagal menampilkan gambar asli: {e}")
@@ -491,7 +491,7 @@ elif page == "📜 Riwayat Deteksi":
                     with col_hist_img2:
                         st.markdown("<h6>Gambar Hasil Deteksi:</h6>", unsafe_allow_html=True)
                         detected_img_pil = helper.blob_to_pil(record.detected_image_blob)
-                        st.image(detected_img_pil, use_column_width=True, output_format='PNG')
+                        st.image(detected_img_pil, use_container_width=True, output_format='PNG')
                 except Exception as e:
                     with col_hist_img2:
                         st.warning(f"Gagal menampilkan gambar hasil deteksi: {e}")
