@@ -74,8 +74,7 @@ if 'frame_save_controller' not in st.session_state:
 # --- CSS Kustom ---
 st.markdown("""
 <style>
-    /* Menyembunyikan menu default, footer, dan header Streamlit */
-    #MainMenu, footer, header {visibility: hidden;}
+    
 
     /* Kontainer utama aplikasi */
     .main .block-container {
