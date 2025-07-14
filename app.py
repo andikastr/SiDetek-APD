@@ -292,12 +292,12 @@ if page == "🏠 Beranda":
     with col1:
         default_image_path = str(settings.DEFAULT_IMAGE)
         default_image = PIL.Image.open(default_image_path)
-        st.image(default_image_path, caption="Uploaded Image", use_column_width=True)
+        st.image(default_image_path, caption="Uploaded Image", use_container_width=True)
     
     with col2:
         default_detected_image_path = str(settings.DEFAULT_DETECT_IMAGE)
         default_detected_image = PIL.Image.open(default_detected_image_path)
-        st.image(default_detected_image_path, caption='Detected Image', use_column_width=True)
+        st.image(default_detected_image_path, caption='Detected Image', use_container_width=True)
 
 
 elif page == "🔎 Deteksi APD":
