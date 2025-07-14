@@ -1,6 +1,6 @@
-av==12.2.0
-Pillow==11.3.0
-SQLAlchemy==2.0.31
-streamlit==1.37.0
-streamlit_webrtc==0.63.3
-ultralytics==8.3.140
+av
+Pillow
+SQLAlchemy
+streamlit
+streamlit_webrtc
+ultralytics
