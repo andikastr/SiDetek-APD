@@ -394,8 +394,6 @@ elif page == "🔎 Deteksi APD":
             webrtc_ctx = webrtc_streamer(
                 key="apd-detection-webcam",
                 mode=WebRtcMode.SENDRECV,
-                ### PERUBAHAN ###
-                # Gunakan factory untuk membuat instance transformer dan meneruskan controller
                 video_processor_factory=lambda: APDVideoTransformer(controller=frame_saver_controller, confidence_threshold=confidence_thresh_slider),
                 media_stream_constraints={"video": True, "audio": False},
                 async_processing=True,
