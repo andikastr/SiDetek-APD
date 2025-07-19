@@ -397,7 +397,6 @@ elif page == "🔎 Deteksi APD":
                 video_processor_factory=lambda: APDVideoTransformer(controller=frame_saver_controller, confidence_threshold=confidence_thresh_slider),
                 media_stream_constraints={"video": True, "audio": False},
                 async_processing=True,
-                trickle_ice=False,
             )
             st.markdown('</div>', unsafe_allow_html=True)
         
