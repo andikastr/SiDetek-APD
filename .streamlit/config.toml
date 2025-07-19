@@ -1,5 +1,3 @@
 [theme]
 base="light"
 
-[server.environmentVariables]
-YOLO_CONFIG_DIR = "/tmp"
