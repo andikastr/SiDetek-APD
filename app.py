@@ -12,6 +12,7 @@ import re
 import threading
 import queue
 from datetime import datetime
+import streamlit_webrtc
 
 # Import komponen dari streamlit-webrtc
 from streamlit_webrtc import (
@@ -215,6 +216,7 @@ page = st.sidebar.selectbox(
     ["🏠 Beranda", "🔎 Deteksi APD", "📜 Riwayat Deteksi"],
     key='page_selector'
 )
+st.sidebar.info(f"streamlit-webrtc version: {streamlit_webrtc.__version__}")
 
 
 
