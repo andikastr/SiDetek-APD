@@ -395,6 +395,16 @@ elif page == "🔎 Deteksi APD":
                 key="apd-detection-webcam",
                 mode=WebRtcMode.SENDRECV,
                 video_processor_factory=lambda: APDVideoTransformer(controller=frame_saver_controller, confidence_threshold=confidence_thresh_slider),
+                rtc_configuration={
+                    "iceServers": [
+                        {"urls": "stun:stun.l.google.com:19302"},
+                        {
+                            "urls": "turn:global.turn.twilio.com:3478?transport=udp",
+                            "username": "your_username",
+                            "credential": "your_credential"
+                        },
+                    ]
+                },
                 media_stream_constraints={"video": True, "audio": False},
                 async_processing=True,
             )
