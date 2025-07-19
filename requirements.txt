@@ -2,5 +2,5 @@ av
 Pillow
 SQLAlchemy
 streamlit
-streamlit_webrtc
+streamlit_webrtc==0.46.2
 ultralytics
