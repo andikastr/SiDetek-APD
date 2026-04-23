@@ -4,5 +4,3 @@ SQLAlchemy
 streamlit
 streamlit_webrtc
 ultralytics
-opencv-python-headless
-numpy<2.0
